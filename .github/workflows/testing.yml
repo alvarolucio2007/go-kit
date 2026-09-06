@@ -19,7 +19,7 @@ jobs:
       - name: Check out code into Go module directory
         uses: actions/checkout@v7
       - name: Test
-        run: make test
+        run: go test ./... -v --cover
       - name: Run golangci-lint-action
         uses: golangci/golangci-lint-action@v9
         with:
